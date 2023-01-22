@@ -121,14 +121,16 @@ const Home = ({address} : any) => {
                             <Button 
                                 variant={'outlined'} 
                                 size='small' color={'primary'} 
-                                href='https://drive.google.com/uc?export=download&id=1PXOV4EpQScBCzzP6HunNwdgy7oQeArxu'
+                                href='https://drive.google.com/uc?export=download&id=1GbiYwkHfMYsCfeJPB5Cd6yOlI4xAoyWG'
+                                // https://drive.google.com/file/d/1GbiYwkHfMYsCfeJPB5Cd6yOlI4xAoyWG/view?usp=sharing
                                 sx={{textAlign : 'center'}}
                                 >ATS Version</Button>
                             <Button 
                                 variant={'outlined'} 
                                 size='small' 
                                 color="primary" 
-                                href='https://drive.google.com/uc?export=download&id=1PXOV4EpQScBCzzP6HunNwdgy7oQeArxu'
+                                href='https://drive.google.com/uc?export=download&id=1FxKcLdgbhQ11YPfYknGnKe0bFLbchK_e'
+                                // https://drive.google.com/file/d/1FxKcLdgbhQ11YPfYknGnKe0bFLbchK_e/view?usp=sharing
                                 sx={{textAlign : 'center'}}
                                 >Creative Version</Button>
                         </Stack>

@@ -24,7 +24,7 @@ const steps = [
     {
       label: 'CStylfer',
       linkGithub : 'https://github.com/Novalia9517/CSTYLFER',
-      linkDeploy : '-',
+      linkDeploy : '-https://cstylfer.vercel.app/',
       description:
         'Build Beautiful CSS Faster than Clicking. We help you to got beautiful ui with super fast CSS code, dont waste your time to think about how to make beautiful UI with boring CSS code',
         Image : Cstylfer

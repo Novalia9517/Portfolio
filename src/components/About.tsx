@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Typography, Stack, Grid, Button, Paper} from '@mui/material'
-import Photo from '../assets/photo3.png'
+import Photo from '../assets/Photo3.png'
 import { grey } from '@mui/material/colors';
 import BottomNav from './BottomNav';
 

@@ -1,5 +1,5 @@
 import { Typography, ButtonGroup, Button, Box, Grid, IconButton, Divider, Tooltip, Stack, Backdrop, Modal, Fade } from '@mui/material'
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { purple, grey } from '@mui/material/colors';
 import Photo from '../assets/photo1.png'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -34,21 +34,21 @@ const style = {
         color : ' #3f51b5'
     };
 
-const Home = () => {
+const Home = ({address} : any) => {
     const [open, setOpen] = useState(false)
+    // const home = useRef(null)
 
   return (
     <Stack 
+        ref={address}
         id='home'
         direction={'row'}
         width={'full'}
-        // maxWidth={'100%'}
         maxHeight={'100vh'}
         display={'flex'}
         justifyContent={'start'}
         px={10}
         py={5}
-        sx={{background : '#e8eaf6'}}
         >
         <Stack 
             direction={{ md : 'row', sm : 'column', xs : 'column'}}
@@ -62,7 +62,6 @@ const Home = () => {
             >
             <Box>
                 <Stack
-                    // width={'20px'}
                     height={'full'}
                     justifyContent={'center'}
                     direction={{ md : 'column', sm : 'row', xs : 'row'}} 
@@ -72,14 +71,16 @@ const Home = () => {
                     {buttons}
                 </Stack>
             </Box>
-            <Grid
-                container
-                direction="column"
+            <Box
+                flexDirection="column"
+                display={'flex'}
                 justifyContent="center"
                 alignItems="center"
                 width={'full'}
                 height={'full'}
-                sx={{color : grey[800]}}
+                sx={{color: (theme) =>
+                    theme.palette.mode == 'light' ? `${grey[800]}` : '#fff',
+                }}
                 >
                 <Typography variant='h5'>Hello, I`m</Typography>
                 <Typography
@@ -146,7 +147,7 @@ const Home = () => {
                     >
                     <img src={Photo} width='200px'/>
                 </Box>
-            </Grid>
+            </Box>
             <Stack  
                 direction={'column'}
                 width={'20px'}

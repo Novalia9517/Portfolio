@@ -2,11 +2,12 @@ import React from 'react'
 import {Grid, Typography, Paper} from '@mui/material'
 import { grey } from '@mui/material/colors';
 
-const Services = () => {
+const Services = ({address} : any) => {
     const services = ['Frontend Web Development', 'UI/UX Design with Figma', 'Consume API']
   return (
     <Grid 
-        id='services'
+        ref={address}
+        id={'services'}
         mt={5}
         container
         direction={'column'}
@@ -17,7 +18,7 @@ const Services = () => {
         width={'full'}
         // maxWidth={'100%'}
         minHeight={'full'}
-        sx={{ color : grey[800]}}
+        // sx={{ color : grey[800]}}
         >
         <Typography variant='subtitle1' fontWeight='semibold'>My Service</Typography>
         <Typography

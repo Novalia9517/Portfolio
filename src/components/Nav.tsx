@@ -5,26 +5,28 @@ import {
     Box,
     AppBar,
     Toolbar,
+    Paper,
     IconButton
 } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-const Nav = () => {
+const Nav = ({onToggleDark} : any) => {
     const [mode, setMode] = useState('light')
     const handleClick =() => {
         mode == 'light' ? setMode('dark') : setMode('light')
+        onToggleDark()
     }
 
     console.log(mode)
   return (
-    <Box width={'full'} sx={{ flexGrow: 1, background : '#e8eaf6'}} position={'sticky'} top={'0'} >
-      <Box 
-        px={16}
-        sx={{background : '#e8eaf6'}} >
+    <Box width={'full'} sx={{ flexGrow: 1}} position={'sticky'} top={'0'} >
+      <Paper 
+        sx={{px : 16}}
+         >
         <Toolbar
         sx={{ display : 'flex', 
         justifyContent : 'space-between',
-        background : '#e8eaf6'
         }}>
           <Typography 
             variant='h5'
@@ -41,10 +43,10 @@ const Nav = () => {
                 aria-label="website-mode" 
                 onClick={handleClick}
                 >
-                <LightModeIcon color='info'/>
+                {mode == 'dark' ? <LightModeIcon color='info'/> : <DarkModeIcon color='info'/>}
             </IconButton>
         </Toolbar>
-      </Box>
+      </Paper>
     </Box>
   )
 }

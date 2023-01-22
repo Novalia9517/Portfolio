@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import {
     Box,
     Toolbar,
@@ -15,8 +15,10 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import WorkIcon from '@mui/icons-material/Work';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { Stack } from '@mui/system';
+// import {Link} from 'react-scroll'
+// import * as Scroll from 'react-scroll';
 
-const BottomNav = () => {
+const BottomNav = ({home, about, projects, skills, services, certificate, onClick} : any) => {
   const [active, setActive] = useState<string | null>('home')
 
   const handleChange = (
@@ -24,15 +26,22 @@ const BottomNav = () => {
       updateActive : string | null
   ) => {
       setActive(updateActive)
-      console.log(active)
   }
 
   return (
-    <Box sx={{ flexGrow: 1 }} position='fixed' left={{xs : '20%', sm : '30%', md : '30%', lg : '43%'}} bottom='0' pb={2}>
+    <Box 
+      sx={{ flexGrow: 1 }} 
+      position='fixed'
+      left={'0'}
+      right={'0'}
+      bottom='0'
+      margin={'0 auto'} 
+      pb={2}>
       <Box 
         display={'flex'}
         justifyContent={'center'}
-        sx={{background : 'transparent'}} >
+        sx={{background : 'transparent'}} 
+        >
         <Stack>
             <ToggleButtonGroup
                 aria-label='linking'
@@ -40,41 +49,65 @@ const BottomNav = () => {
                 onChange={handleChange}
                 color='primary'
                 size='small'
-                orientation='horizontal'
+                orientation={'horizontal'}
                 exclusive
                 sx={{
                     border : '2px solid #64b5f6',
                     borderRadius : '25px',
-                    backgroundColor : '#e8eaf6'
-                    
+                    backgroundColor : 'rgba( 134, 187, 228, 0.4 )',
+                    backdropFilter: `blur( 16.5px )`
                 }}
                 >
-                <ToggleButton  value='home' aria-label='home' href='#home' sx={{borderRadius : '25px 0 0 25px',background : '#e8eaf6'}}>
+                <ToggleButton  
+                  value='home' 
+                  aria-label='home' 
+                  onClick={() => onClick(home)}
+                  sx={{borderRadius : '25px 0 0 25px'}}>
                   <Tooltip title="Go To Home" placement="top">
                     <HomeIcon/>
                     </Tooltip>
                   </ToggleButton>
-                <ToggleButton value='about' aria-label='about' href='#about' sx={{ background : '#e8eaf6'}}>
+                <ToggleButton 
+                  value='about' 
+                  aria-label='about' 
+                  onClick={() => onClick(about)}
+                  sx={{}}>
                   <Tooltip title="Go To About" placement="top">
                     <AssignmentIndIcon/>
                     </Tooltip>
                   </ToggleButton>
-                <ToggleButton value='project' aria-label='project' href='#skills' sx={{ background : '#e8eaf6'}}>
+                <ToggleButton 
+                   value='projects' 
+                   aria-label='projects' 
+                   onClick={() => onClick(projects)}
+                   sx={{}}>
                   <Tooltip title="Go To Project" placement="top">
                     <AssignmentTurnedInIcon/>
                     </Tooltip>
                   </ToggleButton>
-                <ToggleButton value='experience' aria-label='experience' href='#projects' sx={{ background : '#e8eaf6'}}>
+                <ToggleButton 
+                 value='skills' 
+                 aria-label='skills' 
+                 onClick={() => onClick(skills)}
+                 sx={{}}>
                   <Tooltip title="Go To Experience" placement="top">
                     <LocalOfferIcon/>
                     </Tooltip>
                   </ToggleButton>
-                <ToggleButton value='offering' aria-label='offering' href='#services' sx={{ background : '#e8eaf6'}}>
+                <ToggleButton 
+                 value='services' 
+                  aria-label='services' 
+                  onClick={() => onClick(services)}
+                  sx={{}}>
                   <Tooltip title="Go To Offering" placement="top">
                     <WorkIcon/>
                     </Tooltip>
                   </ToggleButton>
-                <ToggleButton value='contact' aria-label='contact' href='#contact' sx={{borderRadius : '0 25px 25px 0', background : '#e8eaf6'}}>
+                <ToggleButton 
+                 value='certificate' 
+                 aria-label='certificate' 
+                 onClick={() => onClick(certificate)}
+                 sx={{borderRadius : '0 25px 25px 0'}}>
                   <Tooltip title="Go To Contact" placement="top">
                     <ContactMailIcon/>
                     </Tooltip>

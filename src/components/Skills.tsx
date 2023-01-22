@@ -3,7 +3,7 @@ import { Grid, Typography, Paper, Box} from '@mui/material'
 import { grey } from '@mui/material/colors';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
-const Skills = () => {
+const Skills = ({address} : any) => {
     const Datas = [
         {
             title : 'HTML',
@@ -44,7 +44,8 @@ const Skills = () => {
     ]
   return (
     <Grid 
-        id='skills'
+        ref={address}
+        id={'skills'}
         mt={5}
         container
         direction={'column'}
@@ -53,7 +54,7 @@ const Skills = () => {
         pt={10}
         width={'full'}
         minHeight={'full'}
-        sx={{ color : grey[800]}}
+        // sx={{ color : grey[800]}}
         >
         <Typography variant='subtitle1' fontWeight='semibold'>My Skills</Typography>
         <Typography

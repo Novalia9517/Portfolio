@@ -48,10 +48,11 @@ const itemData = [
   ];
 
 
-const Certificate = () =>  {
+const Certificate = ({address} : any) =>  {
   return (
     <Grid 
-        id='services'
+        ref={address}
+        id={'certificate'}
         mt={10}
         container
         direction={'column'}
@@ -62,7 +63,7 @@ const Certificate = () =>  {
         maxWidth={'100%'}
         height={'100vh'}
         maxHeight='100vh'
-        sx={{ color : grey[800]}}
+        // sx={{ color : grey[800]}}
         >
         <Typography variant='subtitle1' fontWeight='semibold'>Others</Typography>
         <Typography

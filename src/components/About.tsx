@@ -4,10 +4,11 @@ import Photo from '../assets/photo3.png'
 import { grey } from '@mui/material/colors';
 import BottomNav from './BottomNav';
 
-const About = () => {
+const About = ({address} : any) => {
     
   return (
     <Grid 
+        ref={address}
         id='about'
         container
         direction={'column'}
@@ -17,7 +18,9 @@ const About = () => {
         width={'full'}
         maxWidth={'100vw'}
         minHeight={'100vh'}
-        sx={{ color : grey[800], background : '#e8eaf6'}}
+        sx={{color: (theme) =>
+            theme.palette.mode == 'light' ? `${grey[800]}` : '#fff',
+        }}
         >
         <Typography variant='subtitle1'>My Intro</Typography>
         <Typography
@@ -50,7 +53,7 @@ const About = () => {
                  px={{xs : 3, sm : 3, md : 6}}
                  py={1}
             >
-                <Box px={{sm : 3, md : 6}} width={'full'} mt={2} sx={{ color : grey[800]}}>
+                <Box px={{sm : 3, md : 6}} width={'full'} mt={2}>
                     <Typography variant='subtitle1'>I'm a Front-End Engineer who just graduated from Bootcamp at Alterra Academy. As Frontend Developer, I create web pages with UI/UX user Interface. I believe that every opportunity I get is very valuable. I participated in several projects using Javascript, Reactjs, Nextjs, Tailwindcss, and Bootstrap. Features that I have worked on include login, registration, Midtrans payment, cart feature, and so on. I trust that we should try hard to raise our level, that’s why I always want to learn and move even with a little change. I hope one day I can become a software engineer with a lot of knowledge and experience.</Typography>
                 </Box>
                 <Box px={6} mt={2}>

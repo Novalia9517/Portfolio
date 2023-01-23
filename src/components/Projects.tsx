@@ -24,19 +24,19 @@ const steps = [
     {
       label: 'CStylfer',
       linkGithub : 'https://github.com/Novalia9517/CSTYLFER',
-      linkDeploy : '-https://cstylfer.vercel.app/',
+      linkDeploy : 'https://cstylfer.vercel.app/',
       description:
         'Build Beautiful CSS Faster than Clicking. We help you to got beautiful ui with super fast CSS code, dont waste your time to think about how to make beautiful UI with boring CSS code',
         Image : Cstylfer
     },
-    {
-      label: 'KB-Type',
-      linkGithub : 'https://github.com/Novalia9517/KB-Type',
-      linkDeploy : '-',
-      description:
-        'An ad group contains one or more ads which target a shared set of keywords.',
-        Image : MovieApp
-    },
+    // {
+    //   label: 'KB-Type',
+    //   linkGithub : 'https://github.com/Novalia9517/KB-Type',
+    //   // linkDeploy : '-',
+    //   description:
+    //     'An ad group contains one or more ads which target a shared set of keywords.',
+    //     Image : MovieApp
+    // },
     {
       label: 'Movie App',
       linkGithub : 'https://github.com/Novalia9517/mymovies-app-react',
@@ -55,7 +55,7 @@ const steps = [
     {
       label: 'Alterra Dashboard',
       linkGithub : 'https://github.com/Novalia9517/Dashboard-Alta-Project',
-      linkDeploy : '-',
+      // linkDeploy : '-',
       description: `Alterra dashboard is a project for cloning the Altera dashboard website. The feature that I create is a list feature, and cards. The technologies at the frontend side we use was ReactJS, Tailwindcss, and DaisyUI.`,
         Image : Alta
     },
@@ -175,9 +175,11 @@ const Projects = ({address} : any) => {
                       <Tooltip title ='Github Link'>
                         <Link href={steps[activeStep].linkGithub} color='#fff' fontWeight={'bold'}>
                         Github</Link></Tooltip>
-                      <Tooltip title ='Website Link'>
-                        <Link href={steps[activeStep].linkDeploy} color='#fff' fontWeight={'bold'}>
-                        Web</Link></Tooltip>
+                        {steps[activeStep].linkDeploy &&
+                          <Tooltip title ='Website Link'>
+                          <Link href={steps[activeStep].linkDeploy} color='#fff' fontWeight={'bold'}>
+                          Web</Link></Tooltip>
+                        }
                     </Stack>
                     <Typography variant='body2'>{steps[activeStep].description} </Typography>
                     

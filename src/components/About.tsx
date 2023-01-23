@@ -57,12 +57,12 @@ const About = ({address} : any) => {
                     <Typography variant='subtitle1'>I'm a Front-End Engineer who just graduated from Bootcamp at Alterra Academy. As Frontend Developer, I create web pages with UI/UX user Interface. I believe that every opportunity I get is very valuable. I participated in several projects using Javascript, Reactjs, Nextjs, Tailwindcss, and Bootstrap. Features that I have worked on include login, registration, Midtrans payment, cart feature, and so on. I trust that we should try hard to raise our level, that’s why I always want to learn and move even with a little change. I hope one day I can become a software engineer with a lot of knowledge and experience.</Typography>
                 </Box>
                 <Box px={6} mt={2}>
-                    <Button 
+                    {/* <Button 
                         variant='contained' 
                         size='small' 
                         color='primary'
                         sx={{width : '150px', fontSize : '11px'}}
-                        >Contact Me</Button>
+                        >Contact Me</Button> */}
                 </Box>
             </Stack>
          </Stack>

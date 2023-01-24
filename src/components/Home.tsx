@@ -121,16 +121,16 @@ const Home = ({address} : any) => {
                             <Button 
                                 variant={'outlined'} 
                                 size='small' color={'primary'} 
-                                href='https://drive.google.com/uc?export=download&id=1GbiYwkHfMYsCfeJPB5Cd6yOlI4xAoyWG'
-                                // https://drive.google.com/file/d/1GbiYwkHfMYsCfeJPB5Cd6yOlI4xAoyWG/view?usp=sharing
+                                href='https://drive.google.com/uc?export=download&id=1j5tCDSEOy8dYhdCQ0mh-sx7Dr0eBh_bJ'
+                                // https://drive.google.com/file/d/1j5tCDSEOy8dYhdCQ0mh-sx7Dr0eBh_bJ/view?usp=sharing
                                 sx={{textAlign : 'center'}}
                                 >ATS Version</Button>
                             <Button 
                                 variant={'outlined'} 
                                 size='small' 
                                 color="primary" 
-                                href='https://drive.google.com/uc?export=download&id=1FxKcLdgbhQ11YPfYknGnKe0bFLbchK_e'
-                                // https://drive.google.com/file/d/1FxKcLdgbhQ11YPfYknGnKe0bFLbchK_e/view?usp=sharing
+                                href='https://drive.google.com/uc?export=download&id=1fmoklYbm45vWnsVU7BG8uHXzVrqMnCrc'
+                                // https://drive.google.com/file/d/1fmoklYbm45vWnsVU7BG8uHXzVrqMnCrc/view?usp=sharing
                                 sx={{textAlign : 'center'}}
                                 >Creative Version</Button>
                         </Stack>

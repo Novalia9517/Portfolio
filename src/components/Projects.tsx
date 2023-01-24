@@ -65,17 +65,17 @@ const cards = [
     {
         icon : <LocalLibraryIcon color='primary'/>,
         title : 'Learning',
-        body : 'Alterra Academy as On of best bootcamp platform',
+        body : 'Alterra Academy as One of best bootcamp platform',
     },
     {
         icon :  <LocalLibraryIcon color='primary'/>,
         title : 'Learning',
-        body : 'Alterra Academy as On of best bootcamp platform',
+        body : 'Alterra Academy as One of best bootcamp platform',
     },
     {
         icon :  <LocalLibraryIcon color='primary'/>,
         title : 'Learning',
-        body : 'Alterra Academy as On of best bootcamp platform',
+        body : 'Alterra Academy as One of best bootcamp platform',
     },
 ]
 

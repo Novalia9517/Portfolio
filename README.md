@@ -5,11 +5,11 @@
 </div>
 
 <br/>
-<h3>
+
 I created this website to introduce myself as a front end engineer.
-You can visit my portfolio at the following [link](https://mymovies-app-react-git.vercel.app/).
+You can visit my portfolio at the following [here](https://novalia-portfolio-website.vercel.app/)
 You can also get my latest resume by downloading it from the website
-</h3>
+
 
 <summary><h2>💻 Tech Stack</h2></summary>
 

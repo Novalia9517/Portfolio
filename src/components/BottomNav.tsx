@@ -117,7 +117,7 @@ const BottomNav = ({
               onClick={() => onClick(services)}
               sx={{}}
             >
-              <Tooltip title="Go To Offering" placement="top">
+              <Tooltip title="Go To Services" placement="top">
                 <WorkIcon />
               </Tooltip>
             </ToggleButton>
@@ -127,7 +127,7 @@ const BottomNav = ({
               onClick={() => onClick(contact)}
               sx={{}}
             >
-              <Tooltip title="Go To Offering" placement="top">
+              <Tooltip title="Go To Contact" placement="top">
                 <ContactMailIcon />
               </Tooltip>
             </ToggleButton>
@@ -137,7 +137,7 @@ const BottomNav = ({
               onClick={() => onClick(certificate)}
               sx={{ borderRadius: "0 25px 25px 0" }}
             >
-              <Tooltip title="Go To Contact" placement="top">
+              <Tooltip title="Go To Certificate" placement="top">
                 <FactCheckIcon />
               </Tooltip>
             </ToggleButton>

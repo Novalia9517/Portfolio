@@ -33,7 +33,6 @@ const Contact = ({ address }: any) => {
     e.preventDefault();
     fetch(scriptURL, { method: "POST", body: form })
       .then((response) =>{
-         console.log("Success!", response)
          setLoading(false);
          toast.info(
            "Send Message Successfull. Please wait for a response from Novalia via email!",
@@ -48,9 +47,23 @@ const Contact = ({ address }: any) => {
              theme: "colored",
            }
          );
-         
       })
-      .catch((error) => console.error("Error!", error.message));
+      .catch(() => {
+         setLoading(false);
+         toast.error(
+           "Send Message failed. Please try again letter or contact Novalia via email or Linkedin",
+           {
+             position: "top-center",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "colored",
+           }
+         );
+      });
 
     setMessage("");
     setName("");
@@ -126,6 +139,7 @@ const Contact = ({ address }: any) => {
             onChange={(e: any) => setEmail(e.target.value)}
           />
           <TextField
+            required
             id="outlined-textarea"
             label="Message"
             placeholder="Input Your Message"
